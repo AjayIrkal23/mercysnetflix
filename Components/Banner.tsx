@@ -17,7 +17,9 @@ export const Banner = ({ netflixOriginals }: Props) => {
   const [currentMovie, setCurrentMovie] = useRecoilState(movieState)
   useEffect(() => {
     setMovie(
-      netflixOriginals[Math.floor(Math.random() * netflixOriginals?.length - 1)]
+      netflixOriginals[
+        Math.floor(Math.random() * (netflixOriginals?.length - 1))
+      ]
     )
   }, [netflixOriginals])
   return (
