@@ -43,11 +43,9 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     () =>
       onAuthStateChanged(auth, (user) => {
         if (user) {
-          // Logged in...
           setUser(user)
           setloading(false)
         } else {
-          // Not logged in...
           setUser(null)
           setloading(true)
           router.push('/login')
@@ -99,9 +97,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     [User, loading]
   )
   return (
-    <AuthContext.Provider value={memoedValue}>
-      {!InitialLoading && children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={memoedValue}>{children}</AuthContext.Provider>
   )
 }
 
