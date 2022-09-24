@@ -40,7 +40,7 @@ export const Row = ({ title, movies }: Props) => {
           ref={rowRef}
           className="flex items-center space-x-0.5 overflow-x-scroll md:space-x-2.5 md:p-2 scrollbar-hide"
         >
-          {movies.map((item, index) => (
+          {movies?.map((item, index) => (
             <ThumbNail key={index} movie={item} />
           ))}
         </div>
