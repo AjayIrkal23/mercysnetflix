@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm, SubmitHandler, FieldValues } from 'react-hook-form'
 import useAuth from '../Hooks/useAuth'
 
 interface Input {
@@ -19,7 +19,7 @@ const login = () => {
     watch,
     formState: { errors },
   } = useForm()
-  const onSubmit: SubmitHandler<Input> = async ({ email, password }) => {
+  const onSubmit: SubmitHandler<FieldValues> = async ({ email, password }) => {
     if (login) {
       await signIn(email, password)
     } else {
