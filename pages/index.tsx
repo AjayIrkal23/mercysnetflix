@@ -21,7 +21,7 @@ interface Props {
   // products: Product[]
 }
 
-const Home: NextPage = ({
+const Home = ({
   netflixOriginals,
   actionMovies,
   comedyMovies,
@@ -30,8 +30,7 @@ const Home: NextPage = ({
   romanceMovies,
   topRated,
   trendingNow,
-}: // products,
-Props) => {
+}: Props) => {
   const showModal = useRecoilValue(modalState)
   return (
     <div className="relative h-screen bg-gradient-to-b from-gray-900/10 to-[#010511] lg:h-[140vh]">
