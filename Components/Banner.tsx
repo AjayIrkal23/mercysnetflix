@@ -33,16 +33,16 @@ export const Banner = ({ netflixOriginals }: Props) => {
           objectFit="cover"
         />
       </div>
-      <h1 className="text-2xl lg:text-7xl md:text-4xl transition-all duration-300  font-bold">
+      <h1 className="text-2xl font-bold transition-all duration-300 lg:text-7xl md:text-4xl">
         {Movie?.title || Movie?.name || Movie?.original_name}
       </h1>
-      <p className="text-xs max-w-xs md:max-w-lg md:text-lg lg:max-w-2xl lg:text-1xl transition-all duration-300  font-bold ">
+      <p className="max-w-xs text-xs font-bold transition-all duration-300 md:max-w-lg md:text-lg lg:max-w-2xl lg:text-1xl ">
         {Movie?.overview}
       </p>
       <div className="flex space-x-3 ">
-        <button className="bannerBtn bg-white text-black">
+        <button className="text-black bg-white bannerBtn">
           {' '}
-          <FaPlay className="h-4 w-4 text-black md:h-7 md:w-7 " />
+          <FaPlay className="w-4 h-4 text-black md:h-7 md:w-7 " />
           Play
         </button>
         <button
@@ -54,7 +54,9 @@ export const Banner = ({ netflixOriginals }: Props) => {
         >
           More Info <InformationCircleIcon className="h-5 w-5 md:h-8 ,md:w-8" />
         </button>
+    
       </div>
+    
     </div>
   )
 }
